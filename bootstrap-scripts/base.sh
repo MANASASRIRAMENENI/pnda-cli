@@ -15,6 +15,13 @@ yum -y install xfsprogs wget salt-minion-2015.8.11-1.el7 curl
 #enable boot time startup
 systemctl enable salt-minion.service
 
+mkdir -p /etc/pnda
+cat << EOF > /etc/pnda/public_ip.sh
+#!/bin/sh
+curl http://169.254.169.254/latest/meta-data/public-ipv4
+EOF
+chmod 755 /etc/pnda/public_ip.sh
+
 # Set the master address the minion will register itself with
 cat > /etc/salt/minion <<EOF
 master: $PNDA_SALTMASTER_IP

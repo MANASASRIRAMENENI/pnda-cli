@@ -23,6 +23,7 @@ iptables -A LOGGING -d  $line -j ACCEPT
 ## Log and reject all the remaining IP connections.
 iptables -A LOGGING -j LOG --log-prefix "[ipreject] " --log-level 7 -m state --state NEW
 iptables -A LOGGING -d  $PNDA_MIRROR_IP/32 -j ACCEPT # PNDA mirror
+iptables -A LOGGING -d  169.254.169.254/32 -j ACCEPT
 if [ "x$CLIENT_IP" != "x" ]; then
 iptables -A LOGGING -d  $CLIENT_IP/32 -j ACCEPT # PNDA client
 fi
