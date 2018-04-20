@@ -37,9 +37,6 @@ else
   if [ "x$privateSubnetCidr" != "x" ]; then
  iptables -A LOGGING -d  ${privateSubnetCidr} -j ACCEPT # PNDA network for openstack and production
   fi
-  if [ "x$publicProducerSubnetCidr:" != "x" ]; then
- iptables -A LOGGING -d  ${publicProducerSubnetCidr} -j ACCEPT # Kafka Ingest network for openstack and production
-  fi
 fi
 iptables -A LOGGING -j REJECT --reject-with icmp-net-unreachable
 iptables-save > /etc/iptables.conf

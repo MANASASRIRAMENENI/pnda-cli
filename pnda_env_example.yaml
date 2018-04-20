@@ -83,12 +83,6 @@ openstack_parameters:
   # Address of gateway for Kakfa interface on private subnet
   privateSubnetGateway: 10.0.1.1
 
-  # CIDR specifying the address range for the public producer subnet (Kafka ingress)
-  publicProducerSubnetCidr: 10.0.2.0/24
-
-  # Address of gateway for Kakfa interface on public producer subnet
-  publicProducerSubnetGateway: 10.0.2.1
-
 existing_machines_parameters:
   #Below 2 variables used in package_install.sh for offline mode
 
