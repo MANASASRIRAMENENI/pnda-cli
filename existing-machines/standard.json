@@ -65,10 +65,10 @@
         "ip_address": "10.2.1.115",
         "node_type": "hadoop-cm"
     },
-    "bastion": {
-        "ip_address": "10.2.1.116",
-        "node_type": "bastion",
-        "public_ip_address": "10.2.0.101",
+    "gateway": {
+        "node_type": "gateway",
+        "ip_address": "10.2.1.117",
+        "public_ip_address": "10.2.0.102",
         "is_bastion": true
     }
 }

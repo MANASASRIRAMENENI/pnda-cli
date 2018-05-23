@@ -17,9 +17,9 @@
         "node_type": "kafka",
         "ip_address": "172.30.0.198"
     },
-    "bastion": {
-        "node_type": "bastion",
-        "ip_address": "172.30.0.6",
+    "gateway": {
+        "node_type": "gateway",
+        "ip_address": ""172.30.0.6"",
         "public_ip_address": "54.246.231.242",
         "is_bastion": true
     }

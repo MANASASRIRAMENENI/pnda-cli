@@ -52,5 +52,9 @@
     "opentsdb-0": {
         "ip_address": "10.2.1.113",
         "node_type": "opentsdb"
+    },
+    "gateway": {
+        "node_type": "gateway",
+        "ip_address": "10.2.1.117"
     }
 }
